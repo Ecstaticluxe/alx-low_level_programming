@@ -2,7 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 
-/* main - this is the entry
+/*
+* main - this is the entry
 * return: always 0
 */
 int main(void)
