@@ -2,10 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
-* main - this is the entry
-* return: always 0
-*/
+/**
+ * main - this is the entry
+ * Return: always 0
+ */
 int main(void)
 {
 	int n;
