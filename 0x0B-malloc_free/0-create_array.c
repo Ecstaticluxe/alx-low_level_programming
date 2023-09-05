@@ -5,7 +5,6 @@
  * create_array - creates an array of chars
  * @size: sixe of unsigned int
  * @c: character
- * @str: string
  * Return: NULL if 0, pointer if fail
  */
 char *create_array(unsigned int size, char c)
