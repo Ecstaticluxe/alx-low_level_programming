@@ -5,7 +5,7 @@
  * argstostr - concatenates all the arguments of your program
  * @ac: input
  * @av: input
- * @str: string
+ *
  * Return: NULL if ac is 0 or av is NULL
  */
 
