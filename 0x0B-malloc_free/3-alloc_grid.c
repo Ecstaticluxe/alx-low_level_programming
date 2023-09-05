@@ -22,8 +22,6 @@ int x, y;
 	for (x = 0; x < height; x++)
 	{
 	mee[x] = malloc(sizeof(int) * width);
-
-	if (mee[x] == NULL)
 		{
 			for (; x >= 0; x--)
 			free(mee[x]);
