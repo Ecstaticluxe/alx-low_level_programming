@@ -13,18 +13,19 @@ unsigned int i;
 char *str;
 va_list ptr;
 va_start(ptr, n);
-
-	for (i = 0; i < n; i++)
+for (i = 0; i < n; i++)
 {
 	str = va_arg(ptr, char *);
-if (!str)
-	str = "nil";
-if (!separator)
-	printf("%s", str);
-else if (separator && i == 0)
-	printf("%s", str);
-else
-	printf("%s%s", separator, str);
+	if (str == NULL)
+	{
+		printf("(nil)");
+	}
+	else
+	{
+		printf("%s", str);
+	}
+	if (i != (n - 1) && separator != NULL)
+		printf("%s", separator);
 }
 printf("\n");
 va_end(ptr);
