@@ -4,7 +4,6 @@
  * array_iterator - executes a function as a parameter
  * @array: array of element
  * @size: size of array
- * @int: input
  * @action: pointer to the function you need to use
  * Return: nothing
  */
@@ -16,7 +15,7 @@ unsigned int i;
 
 	if (array == NULL || action == NULL)
 	return;
-	for (i = 0; i < size;i++)
+	for (i = 0; i < size; i++)
 	{
 	action(array[i]);
 	}
