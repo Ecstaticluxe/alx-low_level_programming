@@ -1,14 +1,22 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <string.h>
+int len(const char *str);
 /**
- * add_node_end- a function that adds a new node at the end of a list_t list
- * @head: head of lists
+ *add_node_end - adds node
+ * @head: header
+ * @ str: the pointer and new node
+ * Return: pointer to the head
+ */
+list_t *add_node_end(list_t **head, const char *str)
+
+/**
+ * create_node: a function that creates node
  * @ str: string of lists
- * Return:  the address of the new element, or NULL if it failed
+ * Return: pointer
  */
 
-list_t *add_node_end(list_t **head, const char *str)
+list_t *create_node(const char *str)
 {
 	list_t *new;
 	list_t *temp = *head;
@@ -20,8 +28,10 @@ new = malloc(sizeof(list_t));
 if (!new)
 return (NULL);
 	new->str = strdup(str);
-	new->len = len;
+	new->len = len(str);
 	new->next = NULL;
+	return (new);
+
 	if (*head == NULL)
 	{
 	*head = new;
