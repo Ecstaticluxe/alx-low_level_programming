@@ -8,39 +8,34 @@ int len(const char *str);
  * @ str: the pointer and new node
  * Return: pointer to the head
  */
-list_t *add_node_end(list_t **head, const char *str)
 
-/**
- * create_node: a function that creates node
- * @ str: string of lists
- * Return: pointer
- */
-
-list_t *create_node(const char *str)
+list_t *add_node_end(list_t **head, const char *str) 
 {
-	list_t *new;
-	list_t *temp = *head;
-	unsigned int len = 0;
+	list_t *new, *temp;
+	size_t nchar;
 
-while (str[len])
-len++;
-new = malloc(sizeof(list_t));
-if (!new)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 return (NULL);
-	new->str = strdup(str);
-	new->len = len(str);
-	new->next = NULL;
-	return (new);
 
-	if (*head == NULL)
+	new->str = strdup(str);
+
+       	for (nchar = 0;	str[nchar]; nchar++)
+		;
+	new->len = nchar;
+	new->next = NULL;
+	temp = *head;
+
+	if (temp == NULL)
 	{
-	*head = new;
-	return (new);
+
+		*head = new;
 	}
-{
-while (temp->next)
-	temp = temp->next;
-}
-	temp->next = new;
-	return (new);
+       	else
+	{
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new;
+	}
+	return (*head);
 }
