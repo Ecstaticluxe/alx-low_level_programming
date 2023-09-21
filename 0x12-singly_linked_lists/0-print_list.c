@@ -23,7 +23,8 @@ for (i = 1; h->next != NULL; i++)
 		printf("[%u] %s\n", h->len, h->str);
 	}
 	h = h->next;
+	i++;
 }
-printf("[%u] %s\n", h->len, "(nil)");
+
 return (i);
 }
