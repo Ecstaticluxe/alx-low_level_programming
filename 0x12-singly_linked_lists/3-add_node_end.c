@@ -19,7 +19,16 @@ if (new == NULL)
 return (NULL);
 
 	new->str = strdup(str);
-
+for (nchar = 0; str[nchar]; nchar++)
+	;
+new->len = nchar;
+new->next = NULL;
+temp = *head;
+if (temp == NULL)
+{
+	*head = new;
+}
+else
 	{
 		while (temp->next != NULL)
 			temp = temp->next;
