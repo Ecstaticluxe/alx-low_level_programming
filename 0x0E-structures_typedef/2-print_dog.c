@@ -13,9 +13,12 @@ if (d == NULL)
 	return;
 	{
 	if (d->name == NULL)
-	d->name = "(nil)";
+	printf("Name: (nil)\n");
 	}
+else
+	printf(Name: %s\n", d->name);
+
 if (d->owner == NULL)
 	d->owner = "(nil)";
-printf ("Name:%s\n Age:%f\n Owner:%s\n", d->name, d->age, d->owner);
+print("Name:%s\n Age:%f\n Owner:%s\n", d->name, d->age, d->owner);
 }
