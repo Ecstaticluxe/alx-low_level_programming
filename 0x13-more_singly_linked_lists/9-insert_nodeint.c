@@ -32,7 +32,7 @@ if (idx == 0)
 }
 for  (i = 0; temp && i < idx; i++)
 {
-if (i == idx - 1)
+	if (i == idx - 1)
 {
 		new->next = temp->next;
 		temp->next = new;
