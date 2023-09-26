@@ -14,7 +14,8 @@ listint_t *temp;
 while (head)
 {
 
-	temp = head->next
+	temp = head->next;
+
 		free(head);
 	head = temp;
 }
