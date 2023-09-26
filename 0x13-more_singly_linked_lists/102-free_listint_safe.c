@@ -7,7 +7,7 @@
  * @h: pointer
  * Return: the size of the list that was free'd
  */
-size_t free_listint_safe(listint_t **h);
+size_t free_listint_safe(listint_t **h)
 {
 size_t len = 0;
 	int set;
@@ -19,7 +19,7 @@ size_t len = 0;
 	while (*h)
 	{
 		set = *h - (*h)->next;
-		if (diff > 0)
+		if (set > 0)
 		{
 			temp = (*h)->next;
 			free(*h);
