@@ -48,7 +48,7 @@ if (head == NULL || head->next == NULL)
 }
 
 /**
- * print_listint -  a function that prints a listint_t linked list
+ * print_listint_safe -  a function that prints a listint_t linked list
  * @head: pointer
  * Return: the number of nodes in the list
  */
@@ -59,7 +59,7 @@ nodes = looped_listint_len(head);
 
 if (nodes == 0)
 {
-	for (;head != NULL; nodes++)
+	for (; head != NULL; nodes++)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
 	head = head->next;
