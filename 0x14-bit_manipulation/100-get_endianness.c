@@ -6,7 +6,7 @@
  * Return: number checked
  */
 
-int get_endianness(void);
+int get_endianness(void)
 
 {
 unsigned int i = 1;
