@@ -16,7 +16,7 @@ int i, count = 0;
 unsigned long int new;
 unsigned long int main = n ^ m;
 
-for (i = 63; i >= 0; i++)
+for (i = 63; i >= 0; i--)
 {
 	new = main >> i;
 	if (new & 1)
