@@ -42,17 +42,18 @@ else
 
 if (current == NULL)
 	{
-	free(new_node);
+	free(new_node)
 	return (NULL);
-        }
+	}
 
-        new_node->next = current->next;
-        new_node->prev = current;
-        if (current->next != NULL) {
-            current->next->prev = new_node;
-        }
-        current->next = new_node;
-    }
+	new_node->next = current->next;
+	new_node->prev = current;
+	if (current->next != NULL)
+	{
+		current->next->prev = new_node;
+	}
+	current->next = new_node;
+	}
 
-    return (new_node);
+	return (new_node);
 }
