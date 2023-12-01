@@ -9,41 +9,27 @@
  *
  */
 
-typedef struct Node
-{
-    char *key;
-    int value;
-    struct Node *next;
-} Node;
-
-typedef struct
-{
-    size_t size;
-    Node **array;
-} hash_table_t;
-
-
-void hash_table_delete(hash_table_t *ht) 
+void hash_table_delete(hash_table_t *ht)
 {
 	hash_node_t *bucket, *aux_free;
-	        unsigned long int i = 0;
-		
-		if (ht == NULL)
-		{
+	unsigned long int i = 0;
+
+		if (!ht)
 			return;
-		}
-		
-		for (size_t i = 0; i < ht->size; ++i)
+
+
+		for (i = 0; i < ht->size; ++i)
 		{
-			Node *current = ht->array[i];
-			Node *next;
-			
-			while (current != NULL)
-	{
-		next = current->next;
-		free(current->key);
-		free(current);
-		current = next;
+		bucket = ht->array[i];
+		while (bucket)
+		{
+			aux_free = bucket;
+			bucket = bucket->next;
+			if (aux_free->key)
+				free(aux_free->key);
+			if (aux_free->value)
+				free(aux_free->value);
+			free(aux_free);
 	}
 		}
 		free(ht->array);
