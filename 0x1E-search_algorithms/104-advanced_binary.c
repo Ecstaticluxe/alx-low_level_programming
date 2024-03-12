@@ -15,7 +15,7 @@ int rec_search(int *array, size_t size, int value)
 
 	if (array == NULL || size == 0)
 		return (-1);
-	
+
 	printf("Searching in array");
 
 	for (i = 0; i < size; i++)
@@ -32,7 +32,7 @@ int rec_search(int *array, size_t size, int value)
 			return (rec_search(array, half + 1, value));
 		return ((int)half);
 	}
-	
+
 	if (value < array[half])
 		return (rec_search(array, half + 1, value));
 
