@@ -21,7 +21,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	m = (size_t)sqrt((double)size);
 	index = 0;
 	k = 0;
-	
+
 	do {
 		prev = list;
 		k++;
